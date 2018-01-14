@@ -14,7 +14,8 @@ app.use(webpackDevMiddleware(compiler, {
   publicPath: '/js',
   stats: {
     colors: true,
-    chunks: false
+    chunks: false,
+    modules: false
   }
 }))
 

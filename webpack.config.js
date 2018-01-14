@@ -13,7 +13,7 @@ const config = {
   output: {
     path: `${rootDir}/js`,
     filename: '[name].js',
-    publicPath: '/public/js/'
+    publicPath: '/js/'
   },
 
   module: {
@@ -21,6 +21,10 @@ const config = {
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.vue$/, exclude: /node_modules/, loader: 'vue-loader' }
     ]
+  },
+
+  resolve: {
+    extensions: ['.js', '.vue']
   },
 
   plugins: [

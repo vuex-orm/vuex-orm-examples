@@ -5,12 +5,17 @@
     "build": "NODE_ENV=production webpack"
   },
   "devDependencies": {
+    "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.8",
     "express": "^4.16.2",
+    "normalize.css": "^7.0.0",
+    "postcss-css-variables": "^0.8.0",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^3.0.0",
     "vue": "^2.5.13",
     "vue-loader": "^13.7.0",
     "vue-template-compiler": "^2.5.13",
