@@ -18,6 +18,8 @@ $ yarn install
 $ yarn dev
 ```
 
+Then you can access http://localhost:3000 to play with the app!
+
 ## Contribution
 
 If you have any idea to make this example application easier to understand to people who are new to the Vuex ORM, please open an issue, or pull request :tada:
