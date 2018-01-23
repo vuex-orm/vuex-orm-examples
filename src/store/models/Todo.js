@@ -1,4 +1,4 @@
-import { Model } from 'vuex-orm'
+import { Model } from '@vuex-orm/core'
 import User from './User'
 
 export default class Todo extends Model {

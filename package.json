@@ -5,12 +5,13 @@
     "build": "NODE_ENV=production webpack"
   },
   "devDependencies": {
+    "@vuex-orm/core": "^0.16.0",
     "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
-    "css-loader": "^0.28.8",
+    "css-loader": "^0.28.9",
     "express": "^4.16.2",
     "normalize.css": "^7.0.0",
     "postcss-css-variables": "^0.8.0",
@@ -20,7 +21,6 @@
     "vue-loader": "^13.7.0",
     "vue-template-compiler": "^2.5.13",
     "vuex": "^3.0.1",
-    "vuex-orm": "^0.15.0",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0"

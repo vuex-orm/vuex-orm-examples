@@ -1,4 +1,4 @@
-import { Database } from 'vuex-orm'
+import { Database } from '@vuex-orm/core'
 import User from './models/User'
 import users from './modules/users'
 import Todo from './models/Todo'

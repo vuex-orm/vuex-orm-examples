@@ -1,6 +1,6 @@
 <template>
   <div class="AppFooter">
-    <p class="text">Proudy Created by <a href="https://vuejs.org/" target="_blank">Vue</a>, and Powered by <a href="https://github.com/revolver-app/vuex-orm">Vuex ORM</a>.</p>
+    <p class="text">Proudy Created by <a href="https://vuejs.org/" target="_blank">Vue</a>, and Powered by <a href="https://github.com/vuex-orm/vuex-orm">Vuex ORM</a>.</p>
   </div>
 </template>
 
