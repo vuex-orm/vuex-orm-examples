@@ -4,6 +4,8 @@ const webpack = require('webpack')
 const rootDir = path.join(__dirname, '.')
 
 const config = {
+  mode: 'development',
+
   devtool: 'inline-source-map',
 
   entry: {
@@ -35,14 +37,10 @@ const config = {
 }
 
 if (process.env.NODE_ENV === 'production') {
+  config.mode = 'production'
+
   config.entry.main.shift()
   config.output.path = `${rootDir}/public/js`
-
-  config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false }
-    })
-  )
 } else {
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
   config.plugins.push(new webpack.NoEmitOnErrorsPlugin())
