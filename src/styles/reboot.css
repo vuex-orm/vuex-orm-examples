@@ -37,11 +37,6 @@ body {
   -moz-font-feature-settings: 'liga', 'kern';
 }
 
-#Main.en,
-#Main.ja {
-  background-color: var(--c-background);
-}
-
 /**
  * Suppress the focus outline on elements that cannot be accessed via keyboard.
  * This prevents an unwanted focus outline from appearing around elements that

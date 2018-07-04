@@ -19,16 +19,10 @@ export default {
     TodosList
   },
 
-  data () {
-    return {
-      id: 4
-    }
-  },
-
   methods: {
     add () {
       this.$store.dispatch('entities/todos/insert', {
-        data: { id: this.id++ }
+        data: { title: '' }
       })
     }
   }

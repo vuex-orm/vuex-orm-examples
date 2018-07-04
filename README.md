@@ -10,12 +10,12 @@ Clone this repository and then run following commands.
 
 ```bash
 $ npm install
-$ npm run dev
+$ npm run serve
 
 # Or with yarn.
 
 $ yarn install
-$ yarn dev
+$ yarn serve
 ```
 
 Then you can access http://localhost:3000 to play with the app!

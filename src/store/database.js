@@ -1,7 +1,7 @@
 import { Database } from '@vuex-orm/core'
-import User from './models/User'
+import User from '@/models/User'
+import Todo from '@/models/Todo'
 import users from './modules/users'
-import Todo from './models/Todo'
 import todos from './modules/todos'
 
 const database = new Database()

@@ -8,6 +8,7 @@
         class="option"
         :value="user.id"
         :selected="todo.user_id == user.id"
+        :key="user.id"
         v-for="user in users"
       >
         {{ user.name }}
@@ -46,7 +47,7 @@ export default {
     update (e) {
       this.$store.dispatch('entities/todos/update', {
         id: this.todoId,
-        user_id: Number(e.target.value)
+        user_id: e.target.value
       })
     }
   }

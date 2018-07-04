@@ -6,10 +6,10 @@ export default class Todo extends Model {
 
   static fields () {
     return {
-      id: this.attr(null),
-      user_id: this.attr(null),
-      title: this.attr(''),
-      done: this.attr(false),
+      id: this.increment(),
+      user_id: this.number(0),
+      title: this.string(''),
+      done: this.boolean(false),
       assignee: this.belongsTo(User, 'user_id')
     }
   }

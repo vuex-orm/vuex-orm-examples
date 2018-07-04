@@ -19,16 +19,10 @@ export default {
     UsersList
   },
 
-  data () {
-    return {
-      id: 3
-    }
-  },
-
   methods: {
     add () {
       this.$store.dispatch('entities/users/insert', {
-        data: { id: this.id++ }
+        data: { name: '' }
       })
     }
   }
