@@ -10,7 +10,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
     "@vue/cli-service": "^3.0.0-beta.15",
     "@vue/eslint-config-standard": "^3.0.0-rc.3",
-    "@vuex-orm/core": "^0.25.4",
+    "@vuex-orm/core": "^0.25.5",
     "normalize.css": "^8.0.0",
     "postcss-css-variables": "^0.9.0",
     "postcss-import": "^11.1.0",

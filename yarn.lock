@@ -865,9 +865,9 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@vue/web-component-wrapper/-/web-component-wrapper-1.2.0.tgz#bb0e46f1585a7e289b4ee6067dcc5a6ae62f1dd1"
 
-"@vuex-orm/core@^0.25.4":
-  version "0.25.4"
-  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.25.4.tgz#0609e0df8a2ab2b614d53b8ce25e2c2bd562d0d3"
+"@vuex-orm/core@^0.25.5":
+  version "0.25.5"
+  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.25.5.tgz#ebdcfbbdb19195fff76309c1a8d4c1a708a23b38"
 
 "@webassemblyjs/ast@1.5.12":
   version "1.5.12"
