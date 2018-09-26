@@ -33,12 +33,22 @@ export default {
     AppFooter
   },
 
+  data () {
+    return {
+      yay: 'Hello!'
+    }
+  },
+
   created () {
     // Here we are stubbing the initial data. In the real world, this
     // should be the response from the API Backend.
     const initialData = data
 
     this.$store.dispatch('entities/todos/create', { data: initialData })
+  },
+
+  mounted () {
+    this.$store.dispatch('entities/users/test')
   }
 }
 </script>

@@ -1,3 +1,10 @@
 export default {
-  namespaced: true
+  namespaced: true,
+
+  actions: {
+    test () {
+      console.log(this)
+      console.log(this.yay)
+    }
+  }
 }
