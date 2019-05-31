@@ -793,9 +793,13 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@vue/web-component-wrapper/-/web-component-wrapper-1.2.0.tgz#bb0e46f1585a7e289b4ee6067dcc5a6ae62f1dd1"
 
-"@vuex-orm/core@^0.26.2":
-  version "0.26.2"
-  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.26.2.tgz#f93c49499b4050117d8b05a20e9239fb94388c44"
+"@vuex-orm/core@^0.31.12":
+  version "0.31.12"
+  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.31.12.tgz#4f3551a00b269ee41350a3478d29d3facae69689"
+  integrity sha512-Vint59DmiHQdUEE/bR3MDQFn8ghZYdJcRSTDVyKrmnAPWqGVUzbbEQ8OseK7WhZVS5V8sNR6U3IZQtShWAmNpw==
+  dependencies:
+    normalizr "^3.3.0"
+    vuex "^3.1.1"
 
 "@webassemblyjs/ast@1.7.8":
   version "1.7.8"
@@ -4591,6 +4595,11 @@ normalize.css@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.0.tgz#14ac5e461612538a4ce9be90a7da23f86e718493"
 
+normalizr@^3.3.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-3.4.0.tgz#fe79fd77768e0ae99944a8c35cbdb58521ab5d34"
+  integrity sha512-0dQLKpvsSb2f+vZwj78L855OMn9aeMQ0dQhduRqX3GkJh+k6rN9kcftxBV/VkW1n4q9OuV6F43Angn+pNbjg9w==
+
 npm-bundled@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.3.tgz#7e71703d973af3370a9591bafe3a63aca0be2308"
@@ -6772,9 +6781,10 @@ vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
-vuex@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
+vuex@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
+  integrity sha512-ER5moSbLZuNSMBFnEBVGhQ1uCBNJslH9W/Dw2W7GZN23UQA69uapP5GTT9Vm8Trc0PzBSVt6LzF3hGjmv41xcg==
 
 watchpack@^1.5.0:
   version "1.6.0"
