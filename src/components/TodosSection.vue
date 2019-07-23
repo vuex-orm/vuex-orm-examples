@@ -1,28 +1,29 @@
 <template>
-  <section class="Users">
+  <section class="Todos">
     <div class="container">
       <div class="header">
-        <h2 class="title">USERS</h2>
-        <button class="button" @click="add">ADD USER</button>
+        <h2 class="title">TODOS</h2>
+        <button class="button" @click="add">ADD TODO</button>
       </div>
 
-      <UsersList />
+      <TodoList />
     </div>
   </section>
 </template>
 
 <script>
-import UsersList from './UsersList'
+import Todo from '@/models/Todo'
+import TodoList from './TodoList'
 
 export default {
   components: {
-    UsersList
+    TodoList
   },
 
   methods: {
     add () {
-      this.$store.dispatch('entities/users/insert', {
-        data: { name: '' }
+      Todo.insert({
+        data: { title: '' }
       })
     }
   }

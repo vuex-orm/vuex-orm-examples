@@ -1,6 +1,6 @@
 <template>
   <div class="TodosAssignee">
-    <User class="user" />
+    <IconUser class="user" />
 
     <select class="select" :class="{ selected: !!todo.assignee }" @change="update">
       <option class="option" value="">Choose assignee</option>
@@ -15,18 +15,20 @@
       </option>
     </select>
 
-    <ChevronDown class="down" />
+    <IconChevronDown class="down" />
   </div>
 </template>
 
 <script>
-import User from './icons/User'
-import ChevronDown from './icons/ChevronDown'
+import User from '@/models/User'
+import Todo from '@/models/Todo'
+import IconUser from './icons/IconUser'
+import IconChevronDown from './icons/IconChevronDown'
 
 export default {
   components: {
-    User,
-    ChevronDown
+    IconUser,
+    IconChevronDown
   },
 
   props: {
@@ -35,17 +37,17 @@ export default {
 
   computed: {
     users () {
-      return this.$store.getters['entities/users/query']().orderBy('name').get()
+      return User.query().orderBy('name').get()
     },
 
     todo () {
-      return this.$store.getters['entities/todos/query']().with('assignee').find(this.todoId)
+      return Todo.query().with('assignee').find(this.todoId)
     }
   },
 
   methods: {
     update (e) {
-      this.$store.dispatch('entities/todos/update', {
+      Todo.update({
         id: this.todoId,
         user_id: e.target.value
       })

@@ -2,11 +2,11 @@
   <div class="App">
     <AppHeader />
 
-    <Description />
+    <AppDescription />
 
     <div class="container">
-      <div class="users"><Users /></div>
-      <div class="todos"><Todos /></div>
+      <div class="users"><UsersSection /></div>
+      <div class="todos"><TodosSection /></div>
     </div>
 
     <AppFooter />
@@ -14,12 +14,13 @@
 </template>
 
 <script>
-import data from '../data'
-import store from '../store'
+import data from '@/data'
+import store from '@/store'
+import Todo from '@/models/Todo'
 import AppHeader from './AppHeader'
-import Description from './Description'
-import Users from './Users'
-import Todos from './Todos'
+import AppDescription from './AppDescription'
+import UsersSection from './UsersSection'
+import TodosSection from './TodosSection'
 import AppFooter from './AppFooter'
 
 export default {
@@ -27,9 +28,9 @@ export default {
 
   components: {
     AppHeader,
-    Description,
-    Users,
-    Todos,
+    AppDescription,
+    UsersSection,
+    TodosSection,
     AppFooter
   },
 
@@ -44,11 +45,7 @@ export default {
     // should be the response from the API Backend.
     const initialData = data
 
-    this.$store.dispatch('entities/todos/create', { data: initialData })
-  },
-
-  mounted () {
-    this.$store.dispatch('entities/users/test')
+    Todo.insert({ data: initialData })
   }
 }
 </script>

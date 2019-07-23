@@ -5,39 +5,40 @@
         class="input"
         :value="user.name"
         placeholder="Type in user's name!"
-        @input="e => { update(user.id, e.target.value) }"
+        @input="e => { update(user, e.target.value) }"
       >
 
       <p class="tasks">{{ user.todos.length }} Tasks</p>
 
-      <button class="icon" @click="destroy(user.id)">
-        <Trash class="trash" />
+      <button class="icon" @click="destroy(user)">
+        <IconTrash class="trash" />
       </button>
     </div>
   </div>
 </template>
 
 <script>
-import Trash from './icons/Trash'
+import User from '@/models/User'
+import IconTrash from './icons/IconTrash'
 
 export default {
   components: {
-    Trash
+    IconTrash
   },
 
   computed: {
     users () {
-      return this.$store.getters['entities/users/query']().with('todos').orderBy('id', 'desc').get()
+      return User.query().with('todos').orderBy('id', 'desc').get()
     }
   },
 
   methods: {
-    update (id, name) {
-      this.$store.dispatch('entities/users/update', { id, name })
+    update (user, name) {
+      user.$update({ name })
     },
 
-    destroy (id) {
-      this.$store.dispatch('entities/users/delete', id)
+    destroy (user) {
+      user.$delete()
     }
   }
 }

@@ -2,54 +2,55 @@
   <div class="TodosList">
     <div class="todo" :class="{ done: todo.done }" :key="todo.id" v-for="todo in todos">
       <button class="icon" @click="toggle(todo)">
-        <CheckCircle class="svg check" />
+        <IconCheckCircle class="svg check" />
       </button>
 
       <input
         class="input"
         :value="todo.title"
         placeholder="Type in the title of the task!"
-        @input="e => { update(todo.id, e.target.value) }"
+        @input="e => { update(todo, e.target.value) }"
       >
 
-      <Assignee :todoId="todo.id" />
+      <TodoListAssignee :todoId="todo.id" />
 
-      <button class="icon" @click="destroy(todo.id)">
-        <Trash class="svg" />
+      <button class="icon" @click="destroy(todo)">
+        <IconTrash class="svg" />
       </button>
     </div>
   </div>
 </template>
 
 <script>
-import CheckCircle from './icons/CheckCircle'
-import Trash from './icons/Trash'
-import Assignee from './TodosAssignee'
+import Todo from '@/models/Todo'
+import IconCheckCircle from './icons/IconCheckCircle'
+import IconTrash from './icons/IconTrash'
+import TodoListAssignee from './TodoListAssignee'
 
 export default {
   components: {
-    CheckCircle,
-    Trash,
-    Assignee
+    IconCheckCircle,
+    IconTrash,
+    TodoListAssignee
   },
 
   computed: {
     todos () {
-      return this.$store.getters['entities/todos/query']().orderBy('id', 'desc').get()
+      return Todo.query().orderBy('id', 'desc').get()
     }
   },
 
   methods: {
     toggle (todo) {
-      this.$store.dispatch('entities/todos/update', { id: todo.id, done: !todo.done })
+      todo.$update({ done: !todo.done })
     },
 
-    update (id, title) {
-      this.$store.dispatch('entities/todos/update', { id, title })
+    update (todo, title) {
+      todo.$update({ title })
     },
 
-    destroy (id) {
-      this.$store.dispatch('entities/todos/delete', id)
+    destroy (todo) {
+      todo.$delete()
     }
   }
 }
