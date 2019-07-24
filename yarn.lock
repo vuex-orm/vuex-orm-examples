@@ -1017,10 +1017,10 @@
   resolved "https://registry.yarnpkg.com/@vue/web-component-wrapper/-/web-component-wrapper-1.2.0.tgz#bb0e46f1585a7e289b4ee6067dcc5a6ae62f1dd1"
   integrity sha512-Xn/+vdm9CjuC9p3Ae+lTClNutrVhsXpzxvoTXXtoys6kVRX9FkueSUAqSWAyZntmVLlR4DosBV4pH8y5Z/HbUw==
 
-"@vuex-orm/core@^0.32.0":
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.0.tgz#2442297ee414e5a1a798797d6524a0f37db6ac37"
-  integrity sha512-IcwHl8hu+MHhKvSPLv+l6dOcm2xHv/161fW6Xoh6e1dspKedaQnXrwiNf2EPGWVMCX4slaKGUd78/pzUwTCMHA==
+"@vuex-orm/core@^0.32.1":
+  version "0.32.1"
+  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.1.tgz#40d04aba5373b9ae833b4d7b42b2c07746a4f52f"
+  integrity sha512-zy3xj+6robrjNx5nJF73GlhAlcaespLrOByAQAILo/4q1IP542YUPAO+Kr1DH4n0iMV3vaj1275A741+y2djOg==
   dependencies:
     normalizr "^3.4.0"
     vuex "^3.1.1"
