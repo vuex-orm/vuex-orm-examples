@@ -32,7 +32,7 @@ export default {
   },
 
   props: {
-    todoId: { type: Number, required: true }
+    todoId: { type: String, required: true }
   },
 
   computed: {
