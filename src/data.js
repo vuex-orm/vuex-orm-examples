@@ -2,18 +2,25 @@
 // in the real world.
 export default [
   {
-    title: 'Create awesome application!',
-    done: false,
-    assignee: { name: 'John Doe' }
+    name: 'John Doe',
+    todos: [
+      {
+        title: 'Create awesome application!',
+        done: false
+      },
+      {
+        title: 'Read the documentation',
+        done: false
+      }
+    ]
   },
   {
-    title: 'Read the documentation',
-    done: false,
-    assignee: { name: 'John Doe' }
-  },
-  {
-    title: 'Star Vuex ORM repository',
-    done: false,
-    assignee: { name: 'Johnny Doe' }
+    name: 'Johnny Doe',
+    todos: [
+      {
+        title: 'Star Vuex ORM repository',
+        done: false
+      }
+    ]
   }
 ]
