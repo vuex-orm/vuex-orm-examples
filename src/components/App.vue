@@ -16,7 +16,7 @@
 <script>
 import data from '@/data'
 import store from '@/store'
-import Todo from '@/models/Todo'
+import User from '@/models/User'
 import AppHeader from './AppHeader'
 import AppDescription from './AppDescription'
 import UsersSection from './UsersSection'
@@ -45,7 +45,7 @@ export default {
     // should be the response from the API Backend.
     const initialData = data
 
-    Todo.insert({ data: initialData })
+    User.insert({ data: initialData })
   }
 }
 </script>
